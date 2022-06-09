@@ -1,7 +1,12 @@
 
 <div class="container">
-    <app-post-list
-    [posts] ="fakePosts">
-    </app-post-list>
+   <div>
+        <app-post-list [posts] ="posts">
+        </app-post-list>
+    </div>
+        <img class="loader" src="assets/1479.gif" *ngIf="!isPostLoaded">
+   <p 
+    *ngIf="!isPostLoaded && posts.length === 0" 
+    class="alert alert-danger"> Lista jest pusta</p>
 
 </div>

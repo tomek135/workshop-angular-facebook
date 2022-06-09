@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform, PLATFORM_ID } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'myDate'

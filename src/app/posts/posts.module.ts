@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { PostListComponent } from './components/post-list/post-list.component';
 import { PostListItemComponent } from './components/post-list-item/post-list-item.component';
 import { SharedModule } from '../shared/shared.module';
+import { PostsService } from './services/posts.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -12,8 +14,10 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
-  exports: [PostListComponent]
+  exports: [PostListComponent],
+  providers: [PostsService]
 })
 export class PostsModule { }

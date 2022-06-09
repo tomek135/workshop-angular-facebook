@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from 'src/app/posts/interfaces/post.interface';
+import { PostsService } from 'src/app/posts/services/posts.service';
 import fixturePosts from '../../../../../fixtures/posts.fixture.json'
 
 @Component({
@@ -9,11 +10,21 @@ import fixturePosts from '../../../../../fixtures/posts.fixture.json'
 })
 export class HomePageComponent implements OnInit {
 
-  fakePosts: Post[] = fixturePosts;
+  isPostLoaded = false;
+  posts: Post[] = [];
 
-  constructor() { }
+  constructor(
+    private postService: PostsService
+  ) { }
 
   ngOnInit(): void {
+    this.setupPosts();
+  }
+
+  private async setupPosts(){
+    this.posts = await this.postService.getPosts();
+    this.isPostLoaded = true;
+
   }
 
 }

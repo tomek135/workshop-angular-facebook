@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  postUrl: 'http://fakes.herokuapp.com/posts'
 };
