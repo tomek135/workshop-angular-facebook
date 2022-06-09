@@ -1,9 +1,9 @@
 import { User } from "src/app/posts/interfaces/user.interface";
 
-function userFactory(): User {
+export function userFactory(): User {
     return {
-      id:        'string',
-      name:      'string',
-      avatarUrl: 'string'
-    }
+      id: 'fake-id',
+      name: 'fake-name',
+      avatarUrl: 'fake-avatarUrl',
+    };
   }

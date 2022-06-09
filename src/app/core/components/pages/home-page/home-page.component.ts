@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from 'src/app/posts/interfaces/post.interface';
 import { PostsService } from 'src/app/posts/services/posts.service';
+import { Sorter } from 'src/app/shared/helpers/sorter';
 import fixturePosts from '../../../../../fixtures/posts.fixture.json'
 
 @Component({
@@ -22,7 +23,9 @@ export class HomePageComponent implements OnInit {
   }
 
   private async setupPosts(){
-    this.posts = await this.postService.getPosts();
+    const posts = await this.postService.getPosts();
+    const mapTo = (post: Post) => new Date(post.createdTime).getTime();
+    this.posts = Sorter.sortBy(posts, mapTo);
     this.isPostLoaded = true;
 
   }
