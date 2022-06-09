@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  postUrl: 'http://fakes.herokuapp.com/posts'
+  postUrl: 'https://fakes.herokuapp.com/posts'
 };
 
 /*
