@@ -21,7 +21,8 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component: NotFoundPageComponent
+    component: NotFoundPageComponent,
+    title: 'Not Found * Facebook'
   }
 ];
 
