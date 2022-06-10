@@ -8,7 +8,7 @@ import { HomePageComponent } from './components/pages/home-page/home-page.compon
 import { NotFoundPageComponent } from './components/pages/not-found-page/not-found-page.component';
 import { PostsModule } from '../posts/posts.module';
 import { UserModule } from '../user/user.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     PostsModule,
     UserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
