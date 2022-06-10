@@ -10,13 +10,15 @@ import { PostsModule } from '../posts/posts.module';
 import { UserModule } from '../user/user.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { KeystrokesComponent } from './components/keystrokes/keystrokes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     HomePageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    KeystrokesComponent
   ],
   imports: [
     BrowserModule,
