@@ -9,6 +9,7 @@ import { NotFoundPageComponent } from './components/pages/not-found-page/not-fou
 import { PostsModule } from '../posts/posts.module';
 import { UserModule } from '../user/user.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PostsModule,
     UserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

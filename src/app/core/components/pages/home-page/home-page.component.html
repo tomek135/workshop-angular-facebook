@@ -6,7 +6,7 @@
     </div>
         <img class="loader" src="assets/1479.gif" *ngIf="!isPostLoaded">
    <p 
-    *ngIf="!isPostLoaded && posts.length === 0" 
+    *ngIf="isPostLoaded && posts.length === 0" 
     class="alert alert-danger"> Lista jest pusta</p>
 
 </div>
