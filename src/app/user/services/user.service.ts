@@ -21,4 +21,9 @@ export class UserService {
     console.debug('Add user', user.email);
     return true;
   }
+
+  signOut() :boolean{
+    this.isLogged = false;
+    return true
+  }
 }

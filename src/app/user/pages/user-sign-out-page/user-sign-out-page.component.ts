@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-user-sign-out-page',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserSignOutPageComponent implements OnInit {
 
-  constructor() { }
+  isLogoutFinished = false;
+  constructor(
+    private userSevice: UserService
+  ) { }
 
   ngOnInit(): void {
+    this.isLogoutFinished = this.userSevice.signOut();
   }
 
 }
