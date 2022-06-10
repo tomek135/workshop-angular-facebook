@@ -29,8 +29,11 @@ export class UserSignInPageComponent implements OnInit {
   }
 
   onSubmit(){
-    this.userService.signIn(this.credentials as Credentials);
-    this.router.navigateByUrl('/user/profile');
+    const status = this.userService.signIn(this.credentials as Credentials);
+    if(status){
+      this.router.navigateByUrl('/user/profile');
+    }
+
   }
 
 }
