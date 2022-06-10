@@ -1,4 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Credentials } from '../../interfaces/credentials.interface';
+import { UserService } from '../../services/user.service';
+
+type MyNullable<T> = {
+  [P in keyof T]: T[P] | null;
+};
+
 
 @Component({
   selector: 'app-user-sign-in-page',
@@ -7,9 +15,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserSignInPageComponent implements OnInit {
 
-  constructor() { }
+  credentials: MyNullable<Credentials> = {
+    email: null,
+    password: null
+  }
+
+  constructor(
+    private userService: UserService,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
+    this.userService.signIn(this.credentials as Credentials);
+    this.router.navigateByUrl('/user/profile');
   }
 
 }

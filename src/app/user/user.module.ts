@@ -5,6 +5,7 @@ import { UserSignInPageComponent } from './pages/user-sign-in-page/user-sign-in-
 import { UserSignOutPageComponent } from './pages/user-sign-out-page/user-sign-out-page.component';
 import { UserSignUpPageComponent } from './pages/user-sign-up-page/user-sign-up-page.component';
 import { UserRoutingModule } from './user-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,7 +18,9 @@ import { UserRoutingModule } from './user-routing.module';
   ],
   imports: [
     CommonModule, 
-    UserRoutingModule
+    UserRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class UserModule { }
